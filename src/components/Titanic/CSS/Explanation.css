@@ -1,0 +1,10 @@
+.explanationTable {
+  border: 2px solid yellowgreen;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.tableExplanationValue {
+  font-weight: bold;
+  color: yellowgreen;
+}

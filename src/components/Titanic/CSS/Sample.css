@@ -1,0 +1,36 @@
+.result2 {
+  border: 2px solid gold;
+  border-radius: 6px;
+  /* padding: 10px; */
+  /* margin-top: 20px; */
+  font-size: 14px;
+  font-weight: bold;
+  /* width: 30%; */
+}
+.result {
+  border: 2px solid gold;
+  border-radius: 6px;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  width: 30%;
+}
+
+.finalValue {
+  color: gold;
+}
+
+.sampleTable {
+  border: 2px solid black;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.tableValue {
+  font-weight: bold;
+}
+
+h4 {
+  padding: 10px;
+}
