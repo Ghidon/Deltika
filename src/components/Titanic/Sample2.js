@@ -101,7 +101,7 @@ class Sample2 extends Component {
     } = this.state;
     return (
       <div className="container d-flex justify-content-around flex-wrap">
-        <div className="col-4">
+        <div className="col">
           <h4>Sample Data</h4>
           <ul className="list-group list-group-horizontal-lg sampleTable">
             <il className="list-group-item d-flex justify-content-between">
@@ -134,10 +134,10 @@ class Sample2 extends Component {
             </il>
           </ul>
         </div>
-        <div className="col-4">
+        <div className="col">
           <Explanation parentCallback={this.callbackExplanationState} />
         </div>
-        <div className="col-4">
+        <div className="col">
           <h4>Final Goal</h4>
           <ul className="list-group list-group-horizontal-lg result2">
             <il className="list-group-item d-flex justify-content-between">

@@ -101,59 +101,59 @@ class Sample extends Component {
     } = this.state;
     return (
       <div className="container d-flex justify-content-around flex-wrap">
-        <div className="col-4">
+        <div className="col">
           <h4>Sample Data</h4>
           <ul className="list-group list-group-horizontal-lg sampleTable">
-            <il className="list-group-item">
+            <il className="list-group-item d-flex justify-content-between">
               Passenger Class:{" "}
               <span className="tableValue">{this.state.samplePclass}</span>
             </il>
-            <il className="list-group-item">
+            <il className="list-group-item d-flex justify-content-between">
               Passenger Sex:{" "}
               <span className="tableValue">{this.state.sampleSex}</span>
             </il>
-            <il className="list-group-item">
+            <il className="list-group-item d-flex justify-content-between">
               Passenger Age:{" "}
               <span className="tableValue">{this.state.sampleAge}</span>
             </il>
-            <il className="list-group-item">
+            <il className="list-group-item d-flex justify-content-between">
               Paid Fare:{" "}
               <span className="tableValue">{this.state.sampleFare}</span>
             </il>
-            <il className="list-group-item">
+            <il className="list-group-item d-flex justify-content-between">
               Did Embark:{" "}
               <span className="tableValue">{this.state.sampleEmbarked}</span>
             </il>
-            <il className="list-group-item">
+            <il className="list-group-item d-flex justify-content-between">
               Was alone:{" "}
               <span className="tableValue">{this.state.sampleIsAlone}</span>
             </il>
-            <il className="list-group-item">
+            <il className="list-group-item d-flex justify-content-between">
               Survived:{" "}
               <span className="tableValue">{this.state.sampleSurvived}</span>
             </il>
           </ul>
         </div>
-        <div className="col-8">
+        <div className="col-md-8 col-sm-auto">
           <Explanation parentCallback={this.callbackExplanationState} />
         </div>
-        <div className="result">
+        <div className="result d-flex justify-content-between">
           Fare to match : <span className="finalValue">{toMatchFare}</span>
         </div>
-        <div className="result">
+        <div className="result d-flex justify-content-between">
           Age to match : <span className="finalValue">{toMatchAge}</span>
         </div>
-        <div className="result">
+        <div className="result d-flex justify-content-between">
           Class to match : <span className="finalValue">{toMatchClass}</span>
         </div>
-        <div className="result">
+        <div className="result d-flex justify-content-between">
           Embark to match :{" "}
           <span className="finalValue">{explanationEmbarked}</span>
         </div>
-        <div className="result">
+        <div className="result d-flex justify-content-between">
           Sex to match : <span className="finalValue">{explanationSex}</span>
         </div>
-        <div className="result">
+        <div className="result d-flex justify-content-between">
           Was Alone : <span className="finalValue">{explanationIsAlone}</span>
         </div>
       </div>
