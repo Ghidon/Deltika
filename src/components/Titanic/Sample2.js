@@ -164,6 +164,7 @@ class Sample2 extends Component {
             </il>
           </ul>
         </div>
+
         {/* <div className="result">
           Fare to match : <span className="finalValue">{toMatchFare}</span>
         </div>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { findSampleData } from "./Api";
 import Explanation from "./Explanations";
+import { Doughnut, Bar } from "react-chartjs-2";
 import "./CSS/Sample.css";
 
 class Sample extends Component {
@@ -22,6 +23,36 @@ class Sample extends Component {
       explanationIsAlone: "",
       explanationSurvived: "",
       toMatchFare: "",
+      fareChartData: {
+        labels: ["Provided", "Needed"],
+        datasets: [
+          {
+            data: ["", ""],
+            backgroundColor: ["#FF6384", "#36A2EB"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB"],
+          },
+        ],
+      },
+      ageChartData: {
+        labels: ["Provided", "Needed"],
+        datasets: [
+          {
+            data: ["", ""],
+            backgroundColor: ["#FF6384", "#36A2EB"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB"],
+          },
+        ],
+      },
+      classChartData: {
+        labels: ["Provided", "Needed"],
+        datasets: [
+          {
+            data: ["", ""],
+            backgroundColor: ["#FF6384", "#36A2EB"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB"],
+          },
+        ],
+      },
     };
   }
 
@@ -70,22 +101,58 @@ class Sample extends Component {
   };
 
   calculations(state) {
-    console.log(state);
+    console.log(state.classChartData.datasets[0].data[0]);
     //class
     const classPercent = (state.explanationPclass / 100) * state.samplePclass;
     let classDifference = classPercent.toFixed(2);
     let suggestedClass = +state.samplePclass + +classDifference;
     this.setState({ toMatchClass: suggestedClass });
+    this.setState({
+      classChartData: {
+        labels: ["Provided", "Needed"],
+        datasets: [
+          {
+            data: [this.state.samplePclass, this.state.toMatchClass],
+            backgroundColor: ["#FF6384", "#36A2EB"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB"],
+          },
+        ],
+      },
+    });
     //fare
     const farePercent = (state.explanationFare / 100) * state.sampleFare;
     let fareDifference = farePercent.toFixed(2);
     let suggestedFare = (+state.sampleFare + +fareDifference).toFixed(2);
     this.setState({ toMatchFare: suggestedFare });
+    this.setState({
+      fareChartData: {
+        labels: ["Provided", "Needed"],
+        datasets: [
+          {
+            data: [this.state.sampleFare, this.state.toMatchFare],
+            backgroundColor: ["#FF6384", "#36A2EB"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB"],
+          },
+        ],
+      },
+    });
     //age
     const agePercent = (state.explanationAge / 100) * state.sampleAge;
     let ageDifference = agePercent.toFixed(2);
     let suggestedAge = +state.sampleAge + +ageDifference;
     this.setState({ toMatchAge: suggestedAge });
+    this.setState({
+      ageChartData: {
+        labels: ["Provided", "Needed"],
+        datasets: [
+          {
+            data: [this.state.sampleAge, this.state.toMatchAge],
+            backgroundColor: ["#FF6384", "#36A2EB"],
+            hoverBackgroundColor: ["#FF6384", "#36A2EB"],
+          },
+        ],
+      },
+    });
   }
 
   populateSuggestion() {}
@@ -157,6 +224,56 @@ class Sample extends Component {
           <div className="result">
             Was Alone : <span className="finalValue">{explanationIsAlone}</span>
           </div>
+        </div>
+        <div className="col-md-12  d-flex justify-content-between flex-wrap">
+          <div className="chart">
+            <Doughnut
+              data={this.state.fareChartData}
+              width={270}
+              height={270}
+              options={{
+                title: {
+                  display: true,
+                  text: "Fare Summary",
+                },
+              }}
+            />
+          </div>
+          <div className="chart">
+            <Doughnut
+              data={this.state.classChartData}
+              width={270}
+              height={270}
+              options={{
+                title: {
+                  display: true,
+                  text: "Class Summary",
+                },
+              }}
+            />
+          </div>
+          <div className="chart">
+            <Doughnut
+              data={this.state.ageChartData}
+              width={270}
+              height={270}
+              options={{
+                title: {
+                  display: true,
+                  text: "Age Summary",
+                },
+              }}
+            />
+          </div>
+          {/* <div>
+            <h2>Bar Example (custom size)</h2>
+            <Bar
+              data={this.state.barChartData}
+              width={100}
+              height={50}
+              options={{}}
+            />
+          </div> */}
         </div>
       </div>
     );
