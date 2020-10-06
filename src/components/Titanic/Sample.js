@@ -225,7 +225,7 @@ class Sample extends Component {
             Was Alone : <span className="finalValue">{explanationIsAlone}</span>
           </div>
         </div>
-        <div className="col-md-12  d-flex justify-content-between flex-wrap">
+        <div className="col-md-12 d-flex justify-content-between flex-wrap">
           <div className="chart">
             <Doughnut
               data={this.state.fareChartData}

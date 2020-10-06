@@ -20,8 +20,14 @@
   margin-top: 10px;
   padding-top: 10px;
   border-top: 1px solid lightgrey;
+  /* margin: auto; */
+  width: 31.5%;
+  padding: 10px;
 }
 
+.ninna {
+  text-align: center;
+}
 .finalValue {
   color: gold;
 }
@@ -42,6 +48,9 @@ h4 {
 
 @media only screen and (max-width: 600px) {
   .result {
+    width: 100%;
+  }
+  .chart {
     width: 100%;
   }
 }
