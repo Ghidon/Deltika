@@ -138,7 +138,7 @@ class Sample2 extends Component {
           <Explanation parentCallback={this.callbackExplanationState} />
         </div>
         <div className="col-4">
-          <h4>Surviving Goal</h4>
+          <h4>Final Goal</h4>
           <ul className="list-group list-group-horizontal-lg result2">
             <il className="list-group-item d-flex justify-content-between">
               Class to match: <span className="finalValue">{toMatchClass}</span>
