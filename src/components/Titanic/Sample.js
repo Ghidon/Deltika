@@ -137,24 +137,26 @@ class Sample extends Component {
         <div className="col-md-8 col-sm-auto">
           <Explanation parentCallback={this.callbackExplanationState} />
         </div>
-        <div className="result">
-          Fare to match : <span className="finalValue">{toMatchFare}</span>
-        </div>
-        <div className="result">
-          Age to match : <span className="finalValue">{toMatchAge}</span>
-        </div>
-        <div className="result">
-          Class to match : <span className="finalValue">{toMatchClass}</span>
-        </div>
-        <div className="result">
-          Embark to match :{" "}
-          <span className="finalValue">{explanationEmbarked}</span>
-        </div>
-        <div className="result">
-          Sex to match : <span className="finalValue">{explanationSex}</span>
-        </div>
-        <div className="result">
-          Was Alone : <span className="finalValue">{explanationIsAlone}</span>
+        <div className="col-md-12 d-flex justify-content-between flex-wrap">
+          <div className="result">
+            Fare to match : <span className="finalValue">{toMatchFare}</span>
+          </div>
+          <div className="result">
+            Age to match : <span className="finalValue">{toMatchAge}</span>
+          </div>
+          <div className="result">
+            Class to match : <span className="finalValue">{toMatchClass}</span>
+          </div>
+          <div className="result">
+            Embark to match :{" "}
+            <span className="finalValue">{explanationEmbarked}</span>
+          </div>
+          <div className="result">
+            Sex to match : <span className="finalValue">{explanationSex}</span>
+          </div>
+          <div className="result">
+            Was Alone : <span className="finalValue">{explanationIsAlone}</span>
+          </div>
         </div>
       </div>
     );
